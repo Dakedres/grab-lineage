@@ -100,7 +100,7 @@ grabLineage({
 grabLineage().parent
 //=> '/home/dakedres/Projects/Node/bar'
 
-// There's also a synonym for the current directory.
+// There's also a synonym for the current package's directory.
 grabLineage().current
 //=> '/home/dakedres/Projects/Node/bar/foo'
 ```
