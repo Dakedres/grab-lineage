@@ -19,7 +19,7 @@ await grabLineage()
 //=> [ '/home/dakedres/Projects/Node/bar/foo', '/home/dakedres/Projects/Node/bar' ]
 
 // If we need to use it synchronously, or need to use both, we can get them by using the following.
-const { grabLineage, grabLineageSync } = require('grabLineage')
+const { grabLineage, grabLineageSync } = require('grab-lineage')
 
 // It'll work just the same way, but I'm going to be using it asynchronously for these examples.
 grabLineageSync()

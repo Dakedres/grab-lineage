@@ -1,6 +1,6 @@
 {
   "name": "grab-lineage",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Grab the parent package in the dependency tree as well as the current one.",
   "main": "index.js",
   "directories": {
