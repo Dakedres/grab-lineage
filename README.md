@@ -111,7 +111,7 @@ await grabLineage({
 (await grabLineage()).current
 //=> '/home/dakedres/Projects/Node/bar/foo'
 ```
-`bar.js`
+`bar`
 ```JS
 console.log("This is pretty irrelevant but I'm including it anyway!")
 
