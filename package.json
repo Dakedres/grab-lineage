@@ -1,6 +1,6 @@
 {
   "name": "grab-lineage",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Grab the parent package in the dependency tree as well as the current one.",
   "main": "index.js",
   "directories": {
@@ -25,7 +25,9 @@
   },
   "homepage": "https://github.com/Dakedres/grab-lineage#readme",
   "dependencies": {
-    "find-up": "^3.0.0",
+    "find-up": "^3.0.0"
+  },
+  "peerDependencies": {
     "read-pkg": "^4.0.1"
   }
 }

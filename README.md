@@ -15,11 +15,18 @@ const grabLineage = require('grab-lineage')
 
 // Get the paths of all parent packages, note that in this example the "foo" package is installed
 // locally, usually it'd be in the node_modules directory.
-grabLineage()
+await grabLineage()
+//=> [ '/home/dakedres/Projects/Node/bar/foo', '/home/dakedres/Projects/Node/bar' ]
+
+// If we need to use it synchronously, or need to use both, we can get them by using the following.
+const { grabLineage, grabLineageSync } = require('grabLineage')
+
+// It'll work just the same way, but I'm going to be using it asynchronously for these examples.
+grabLineageSync()
 //=> [ '/home/dakedres/Projects/Node/bar/foo', '/home/dakedres/Projects/Node/bar' ]
 
 // Get the paths of all parent packages including their normalized package.json data.
-grabLineage({
+await grabLineage({
   getMetadata: true
 })
 // => [
@@ -61,7 +68,7 @@ grabLineage({
 // ]
 
 // And if you want them in the same format, but without the package.json data obviously.
-grabLineage({
+await grabLineage({
   returnAsObjects: true
 })
 // => [
@@ -71,7 +78,7 @@ grabLineage({
 
 // Now let's say you just want to get the "bar" package, no matter where it is in the dependency
 // tree. Note that you can still enable other options and they will work fine with it!
-grabLineage({
+await grabLineage({
   getMetadata: true,
   name: 'bar'
 })
@@ -97,11 +104,11 @@ grabLineage({
 // But if you just wanted to get the parent package (where the current one is installed), you
 // could just use the "parent" synonym property, it's the same as getting the 1st index of the
 // array.
-grabLineage().parent
+(await grabLineage()).parent
 //=> '/home/dakedres/Projects/Node/bar'
 
 // There's also a synonym for the current directory.
-grabLineage().current
+(await grabLineage()).current
 //=> '/home/dakedres/Projects/Node/bar/foo'
 ```
 `bar.js`

@@ -1,7 +1,7 @@
 const grabLineage = require('../')
 
-const output = grabLineage({
+grabLineage({
   getMetadata: true
 })
-
-console.log(output)
+  .then(console.log)
+  .catch(console.error)
